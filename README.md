@@ -49,8 +49,6 @@ is executed in
 await sm.startServices(serviceName[, serviceName, [...]]);
 ```
 
-```
-
 
 #### manager.stopServices()
 
