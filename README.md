@@ -1,6 +1,6 @@
 # RDA Service Manager
 
-starting and stopping RDA service
+starting and stopping RDA services
 
 
 ## API
