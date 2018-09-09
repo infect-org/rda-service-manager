@@ -1,0 +1,26 @@
+{
+  "name": "rda-service-manager",
+  "version": "1.0.0",
+  "description": "RDA Service Manager mainly used for testing by starting & stopping services",
+  "main": "src/ServiceManager.mjs",
+  "scripts": {
+    "test": "node --experimental-modules --no-warnings ./node_modules/.bin/section ./test/*.mjs --dev --log-level=error+ --log-module=*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infect-org/rda-service-manager.git"
+  },
+  "keywords": [
+    "rda"
+  ],
+  "author": "Michael van der Weg",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/infect-org/rda-service-manager/issues"
+  },
+  "homepage": "https://github.com/infect-org/rda-service-manager#readme",
+  "devDependencies": {
+    "@distributed-systems/eslint-config": "^1.0.0",
+    "section-tests": "^2.2.1"
+  }
+}
