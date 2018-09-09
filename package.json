@@ -1,5 +1,5 @@
 {
-  "name": "rda-service-manager",
+  "name": "@infect/rda-service-manager",
   "version": "1.0.0",
   "description": "RDA Service Manager mainly used for testing by starting & stopping services",
   "main": "src/ServiceManager.mjs",
