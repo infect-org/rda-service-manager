@@ -1,6 +1,6 @@
 {
   "name": "@infect/rda-service-manager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "RDA Service Manager - starting and stopping RDA services",
   "main": "src/ServiceManager.mjs",
   "scripts": {
@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/infect-org/rda-service-manager#readme",
   "devDependencies": {
-    "@distributed-systems/eslint-config": "^1.0.0",
-    "section-tests": "^2.2.1"
+    "@distributed-systems/eslint-config": "^1.0.2",
+    "section-tests": "^2.2.4"
   }
 }

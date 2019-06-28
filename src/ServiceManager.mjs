@@ -85,8 +85,8 @@ export default class ServiceManager {
      * @return     {Promise}  The module path.
      */
     async getModulePath(serviceName) {
-        const sameLevelDir = path.join(process.cwd(), '../', serviceName);
-        const modulesDir = path.join(process.cwd(), 'node_modules', serviceName);
+        const sameLevelDir = path.join(process.cwd(), '../', serviceName, 'index.mjs');
+        const modulesDir = path.join(process.cwd(), 'node_modules', serviceName, 'index.mjs');
 
         return this.fileExists(sameLevelDir).catch(() => {
             return this.fileExists(modulesDir).catch(() => {
