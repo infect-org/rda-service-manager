@@ -1,6 +1,6 @@
-import Child from './Child.js';
 import path from 'path';
 import fs from 'fs';
+import Child from './Child.js';
 
 
 /**

@@ -19,7 +19,7 @@ section('Service Manager', (section) => {
 
 
         const sm = new ServiceManager({
-            args: '--dev --log-level=error+ --log-module=*'.split(' ')
+            args: '--dev.testing --log-level=error+ --log-module=*'.split(' ')
         });
 
 
