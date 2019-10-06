@@ -38,6 +38,12 @@ export default class Child {
         });
 
 
+        if (process.argv.includes('--debug-children')) {
+            this.child.stdout.on('data', (data) => console.log(data.toString()));
+            this.child.stderr.on('data', (data) => console.warn(data.toString()));
+        }
+
+
         this.child.on('exit', () => {
             for (const {reject} of this.messages.values()) reject(new Error(`Child process ${this.modulePath} exited!`));
         });
