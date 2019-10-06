@@ -29,19 +29,12 @@ export default class Child {
             this.resolveReady = resolve;
         });
 
-
         this.child = cp.fork(path.join(this.dirname(), 'ChildProcess.js'), this.args);
 
         // make sure the kid dies with its parent :/
         process.on('beforeExit', () => {
             this.child.kill();
         });
-
-
-        if (process.argv.includes('--debug-children')) {
-            this.child.stdout.on('data', (data) => console.log(data.toString()));
-            this.child.stderr.on('data', (data) => console.warn(data.toString()));
-        }
 
 
         this.child.on('exit', () => {
