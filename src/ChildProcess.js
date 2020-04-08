@@ -2,7 +2,7 @@
 
 
 import Response from './Response.js';
-
+import v8 from 'v8';
 
 
 class ChildProcess {
@@ -14,6 +14,31 @@ class ChildProcess {
         // make sure to exit when the parent dies
         process.on('disconnect', () => {
             this.stopService();
+        });
+    }
+
+
+
+
+    async snapshotHeap(data, response) {
+        const fileName = v8.writeHeapSnapshot();
+        response.send({
+            status: 'ok',
+            fileName,
+        });
+    }
+
+
+
+    /**
+    * report memory usage
+    */
+    async reportMemory(data, response) {
+        const report = process.report.getReport();
+
+        response.send({
+            status: 'ok',
+            data: report.javascriptHeap,
         });
     }
 

@@ -9,13 +9,15 @@ export default class Child {
 
     constructor({
         modulePath,
+        serviceName,
         args = []
     }) {
+        this.id = Math.round(Math.random()*10000000);
+        this.serviceName = `${serviceName}-${this.id}`;
         this.args = args;
         this.modulePath = modulePath;
         this.messages = new Map();
     }
-
 
 
 
@@ -49,6 +51,16 @@ export default class Child {
     }
 
 
+
+    async snapshotHeap() {
+        return await this.send('snapshotHeap', {});
+    }
+
+
+
+    async getMemory(){
+        return await this.send('reportMemory', {});
+    }
 
 
 

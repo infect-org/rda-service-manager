@@ -24,5 +24,8 @@
     "@infect/rda-service-registry": "^2.0.3",
     "section-tests": "^2.2.4"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
 }
